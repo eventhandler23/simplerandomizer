@@ -7,6 +7,9 @@ import simplerandomizer.app.simplerandomizer.extensions.random
 
 class MainActivity : AppCompatActivity() {
 
+    private val minimum = 0
+    private val maximum = 100
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun generateRandomNumber() {
-        val generatedResult = (0..100).random()
+        val generatedResult = (minimum..maximum).random()
         result.text = generatedResult.toString()
     }
 }
